@@ -59,3 +59,24 @@ body {
     background-color: #555;
     cursor: not-allowed;
 }
+
+#rules-guide {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#rules-guide h2 {
+    margin-top: 0;
+}
+
+#rules-guide button {
+    margin-top: 20px;
+}

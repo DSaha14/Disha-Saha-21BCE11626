@@ -160,3 +160,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderBoard();
 });
+
+document.getElementById('show-rules').addEventListener('click', function() {
+    document.getElementById('rules-guide').style.display = 'block';
+});
+
+document.getElementById('close-rules').addEventListener('click', function() {
+    document.getElementById('rules-guide').style.display = 'none';
+});

@@ -80,6 +80,22 @@
     <button id="undo">Undo</button>
     <div id="result"></div>
 
+    <!-- Add a button to show the Piece Movement Guide -->
+<button id="show-rules">Piece Movement Guide</button>
+
+<!-- Create a modal or section for the Piece Movement Guide -->
+<div id="rules-guide" style="display: none;">
+    <h2>Piece Movement Guide</h2>
+    <ul>
+        <li><strong>Pawn (P):</strong> Moves 1 step in any direction (Left, Right, Forward, Backward)</li>
+        <li><strong>Hero1 (H1):</strong> Moves 2 steps in any direction</li>
+        <li><strong>Hero2 (H2):</strong> Moves 2 steps diagonally</li>
+        <li><strong>Hero3 (H3):</strong> Moves 2 steps in one direction, then 1 step perpendicular (All directions)</li>
+    </ul>
+    <button id="close-rules">Close</button>
+</div>
+
+
     <script src="game.js"></script>
 </body>
 </html>
