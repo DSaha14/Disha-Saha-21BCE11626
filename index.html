@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess-like Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .game-container {
+            text-align: center;
+        }
+        .chessboard {
+            display: grid;
+            grid-template-columns: repeat(5, 50px);
+            gap: 5px;
+            margin: 20px auto;
+        }
+        .square {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #333;
+            background-color: #444;
+            cursor: pointer;
+        }
+        .square.selected {
+            background-color: #008cff;
+        }
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #333;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button:disabled {
+            background-color: #555;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="game-container">
+        <div id="current-player">Current Player: A</div>
+        <div class="chessboard" id="chessboard"></div>
+        <div id="selected-character">Selected: None</div>
+        <div class="buttons-container">
+            <button class="button" id="L" disabled>L</button>
+            <button class="button" id="R" disabled>R</button>
+            <button class="button" id="F" disabled>F</button>
+            <button class="button" id="B" disabled>B</button>
+            <button class="button" id="FL" disabled>FL</button>
+            <button class="button" id="FR" disabled>FR</button>
+            <button class="button" id="BL" disabled>BL</button>
+            <button class="button" id="BR" disabled>BR</button>
+        </div>
+    </div>
+    <div id="history">
+        <h2>Move History</h2>
+        <ul></ul>
+    </div>
+    <button id="undo">Undo</button>
+    <div id="result"></div>
+
+    <script src="game.js"></script>
+</body>
+</html>
